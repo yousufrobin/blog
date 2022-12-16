@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home || Yousuf's Diary</title>
+</head>
+
+<body>
+    {% for post in context reversed %}
+    <a href="post/{{post.id}}">
+        <div class="card">
+            <h1>{{post.title}}</h1>
+            <p>{{post.created_time}}</p>
+            <p>{{post.body}}</p>
+        </div>
+    </a>
+    {% endfor %}
+
+</body>
+
+</html>
